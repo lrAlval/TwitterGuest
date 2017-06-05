@@ -16,36 +16,35 @@ class HomeVC: UIViewController {
         // Do any additional setup after loading the view.
         
         
-        
-        
         self.navigationItem.title = "Home"
-        
-        let l_button = UIButton(type: UIButtonType.custom)
-        l_button.setTitle("Add New follower", for: UIControlState.normal)
-        l_button.addTarget(self, action: #selector(HomeVC.pressLeftButton), for: UIControlEvents.touchUpInside)
-        l_button.setTitleColor(UIColor.black, for: UIControlState.normal)
-        l_button.titleLabel!.font = UIFont(name: "Helvetica", size: 10)
-        l_button.sizeToFit()
-        
-        self.navigationItem.leftBarButtonItem = UIBarButtonItem(customView: l_button)
-        
-        let r_button = UIButton(type: UIButtonType.custom)
-        r_button.setTitle("New Tweet", for: UIControlState.normal)
-        r_button.addTarget(self, action: #selector(HomeVC.pressRigthButton), for: UIControlEvents.touchUpInside)
-        r_button.setTitleColor(UIColor.black, for: UIControlState.normal)
-        r_button.titleLabel!.font = UIFont(name: "Helvetica", size: 10)
-        r_button.sizeToFit()
-        self.navigationItem.rightBarButtonItem = UIBarButtonItem(customView: r_button)
+          //self.navigationController?.navigationBar.TransparentNavigationBar()
+//        
+//        let l_button = UIButton(type: UIButtonType.custom)
+//        l_button.setTitle("Add New follower", for: UIControlState.normal)
+//        l_button.addTarget(self, action: #selector(HomeVC.pressLeftButton), for: UIControlEvents.touchUpInside)
+//        l_button.setTitleColor(UIColor.black, for: UIControlState.normal)
+//        l_button.titleLabel!.font = UIFont(name: "Helvetica", size: 10)
+//        l_button.sizeToFit()
+//        
+//        self.navigationItem.leftBarButtonItem = UIBarButtonItem(customView: l_button)
+//        
+//        let r_button = UIButton(type: UIButtonType.custom)
+//        r_button.setTitle("New Tweet", for: UIControlState.normal)
+//        r_button.addTarget(self, action: #selector(HomeVC.pressRigthButton), for: UIControlEvents.touchUpInside)
+//        r_button.setTitleColor(UIColor.black, for: UIControlState.normal)
+//        r_button.titleLabel!.font = UIFont(name: "Helvetica", size: 10)
+//        r_button.sizeToFit()
+//        self.navigationItem.rightBarButtonItem = UIBarButtonItem(customView: r_button)
         
         
         
     }
 
-    
-    func pressRigthButton(){
-        let NewTweetVC = UIStoryboard(name: "LoginFlow", bundle: Bundle.main).instantiateViewController(withIdentifier: "newtweet") as! NewTweetVC
-         self.navigationController?.pushViewController(NewTweetVC, animated: true)
+    @IBAction func ShowNewTweet(){
+        //        let NewTweetVC = UIStoryboard(name: "LoginFlow", bundle: Bundle.main).instantiateViewController(withIdentifier: "newtweet") as! NewTweetVC
+        //         self.navigationController?.pushViewController(NewTweetVC, animated: true)
         
+        self.performSegue(withIdentifier: "newTweetSegue", sender: self)
     }
     
     func pressLeftButton(){
@@ -54,6 +53,10 @@ class HomeVC: UIViewController {
     }
     
     
+    @IBAction func ToNewfollowers(){
+        //self.navigationController?.popViewController(animated: true)
+        self.performSegue(withIdentifier: "newFollowerSegue", sender: self)
+    }
     
     
     

@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="12120" systemVersion="16D32" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="Ofm-oz-8qo">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="12120" systemVersion="16A323" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="Ofm-oz-8qo">
     <device id="retina4_7" orientation="portrait">
         <adaptation id="fullscreen"/>
     </device>
@@ -241,7 +241,22 @@
                             <constraint firstItem="pug-cu-0tG" firstAttribute="top" secondItem="xtq-jW-I7R" secondAttribute="bottom" id="yCR-yS-Nn6"/>
                         </constraints>
                     </view>
-                    <navigationItem key="navigationItem" id="kyx-gs-7zO"/>
+                    <navigationItem key="navigationItem" id="kyx-gs-7zO">
+                        <barButtonItem key="leftBarButtonItem" title="Follower+" id="0h5-pr-mZl">
+                            <connections>
+                                <action selector="ToNewfollowers" destination="nHS-vV-FF6" id="5Qb-c1-wUI"/>
+                            </connections>
+                        </barButtonItem>
+                        <barButtonItem key="rightBarButtonItem" title="Tweet+" id="19S-br-H6e">
+                            <connections>
+                                <action selector="ShowNewTweet" destination="nHS-vV-FF6" id="aGk-OD-Paj"/>
+                            </connections>
+                        </barButtonItem>
+                    </navigationItem>
+                    <connections>
+                        <segue destination="udN-Sr-7er" kind="show" identifier="newFollowerSegue" id="eTZ-Pg-XNA"/>
+                        <segue destination="xQm-DD-S9j" kind="presentation" identifier="newTweetSegue" id="kGf-Eb-Fgx"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="svt-4S-Gzm" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
@@ -263,25 +278,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="5OG-W9-Kst" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-6348" y="878"/>
-        </scene>
-        <!--New TweetVC-->
-        <scene sceneID="cG8-uZ-lUL">
-            <objects>
-                <viewController storyboardIdentifier="newtweet" id="ed9-Zn-xaA" customClass="NewTweetVC" customModule="TwitterGuest" customModuleProvider="target" sceneMemberID="viewController">
-                    <layoutGuides>
-                        <viewControllerLayoutGuide type="top" id="OYr-bb-axv"/>
-                        <viewControllerLayoutGuide type="bottom" id="0ef-bH-zXC"/>
-                    </layoutGuides>
-                    <view key="view" contentMode="scaleToFill" id="Wnt-Ci-GTL">
-                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
-                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <color key="backgroundColor" red="1" green="0.96546941576674861" blue="0.28350640767004742" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                    </view>
-                </viewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="9bT-bJ-0wh" userLabel="First Responder" sceneMemberID="firstResponder"/>
-            </objects>
-            <point key="canvasLocation" x="-5129" y="878"/>
+            <point key="canvasLocation" x="-6636" y="151"/>
         </scene>
         <!--ExploreVC-->
         <scene sceneID="uCi-3l-801">
@@ -326,7 +323,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="B5B-oR-pTy" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-1796" y="286.50674662668666"/>
+            <point key="canvasLocation" x="82.400000000000006" y="286.50674662668666"/>
         </scene>
         <!--View Controller-->
         <scene sceneID="B79-fB-oez">
@@ -345,7 +342,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="tDl-lG-t0D" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-642" y="307"/>
+            <point key="canvasLocation" x="1236" y="306.29685157421289"/>
         </scene>
         <!--View Controller-->
         <scene sceneID="0gK-YN-bCb">
@@ -364,7 +361,82 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="lXn-oa-zOX" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="574" y="390"/>
+            <point key="canvasLocation" x="2452" y="389.95502248875567"/>
+        </scene>
+        <!--New TweetVC-->
+        <scene sceneID="34y-Lk-O9b">
+            <objects>
+                <viewController storyboardIdentifier="newtweet" id="vcM-30-0nQ" customClass="NewTweetVC" customModule="TwitterGuest" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="0NR-bg-mCT"/>
+                        <viewControllerLayoutGuide type="bottom" id="vra-Xk-V26"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="xzd-eH-mjX">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" textAlignment="justified" translatesAutoresizingMaskIntoConstraints="NO" id="87i-ub-ew2">
+                                <rect key="frame" x="16" y="72" width="343" height="274"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <string key="text">Lorem ipsum dolor sit er elit lamet, consectetaur cillium adipisicing pecu, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum. Nam liber te conscient to factor tum poen legum odioque civiuda.</string>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                            </textView>
+                            <toolbar opaque="NO" clearsContextBeforeDrawing="NO" contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="YBy-GT-NvD">
+                                <rect key="frame" x="0.0" y="623" width="375" height="44"/>
+                                <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMinY="YES"/>
+                                <items>
+                                    <barButtonItem title="Cam" id="5GJ-rA-2zq"/>
+                                    <barButtonItem title="Item" id="Odo-Nf-lcO"/>
+                                    <barButtonItem title="Item" id="wzo-Q3-PPw"/>
+                                    <barButtonItem width="122" style="plain" systemItem="fixedSpace" id="PSg-6i-jw3"/>
+                                    <barButtonItem style="plain" id="CtE-0b-J71">
+                                        <button key="customView" opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="M4c-uD-HpG">
+                                            <rect key="frame" x="272" y="7" width="84" height="30"/>
+                                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                            <color key="backgroundColor" red="0.3848548806" green="0.64953017970000004" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                            <color key="tintColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                            <state key="normal" title="Tweet">
+                                                <color key="titleShadowColor" red="0.2727443188" green="1" blue="0.066637350649999996" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                            </state>
+                                        </button>
+                                    </barButtonItem>
+                                </items>
+                            </toolbar>
+                        </subviews>
+                        <color key="backgroundColor" red="1" green="0.96546941580000001" blue="0.28350640770000002" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                    </view>
+                    <navigationItem key="navigationItem" id="t0o-et-uNa">
+                        <barButtonItem key="leftBarButtonItem" title="UserPicHere" id="XYX-gA-oGK"/>
+                        <barButtonItem key="rightBarButtonItem" title="Close" id="fcJ-oH-UqJ">
+                            <connections>
+                                <action selector="CloseNewTweet" destination="vcM-30-0nQ" id="yxM-w5-Qoc"/>
+                            </connections>
+                        </barButtonItem>
+                    </navigationItem>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="INS-gj-cac" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-3383" y="151"/>
+        </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="VZk-Jm-vTE">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="xQm-DD-S9j" sceneMemberID="viewController">
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" misplaced="YES" id="tuG-Qv-ltO">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="vcM-30-0nQ" kind="relationship" relationship="rootViewController" id="qFH-q9-BUF"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="E8j-zE-6Ru" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-4335" y="151"/>
         </scene>
     </scenes>
     <resources>
