@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>ConsumerSecret</key>
+	<string>w2mfNozji4CRGmoQClGCydSSj9CQjZmpnMR70TN5vIqSCh0uRD</string>
+	<key>ConsumerKey</key>
+	<string>66uPQ87D2C8lUhXiTZCLVLYs7</string>
+	<key>authorizeURL</key>
+	<string>https://api.twitter.com/oauth/authorize</string>
+	<key>RequestTokenUrl</key>
+	<string>https://api.twitter.com/oauth/request_token</string>
+	<key>AccessTokenUrl</key>
+	<string>https://api.twitter.com/oauth/access_token</string>
+	<key>AuthenticateUrl</key>
+	<string>https://api.twitter.com/oauth/authenticate?oauth_token=</string>
+	<key>VerifyCredentialsUrl</key>
+	<string>https://api.twitter.com/1.1/account/verify_credentials.json</string>
+	<key>HomeTimelineUrl</key>
+	<string>https://api.twitter.com/1.1/statuses/home_timeline.json</string>
+	<key>TweetUrl</key>
+	<string>https://api.twitter.com/1.1/statuses/update.json</string>
+	<key>CreateFavoriteUrl</key>
+	<string>https://api.twitter.com/1.1/favorites/create.json</string>
+	<key>DestroyFavoriteUrl</key>
+	<string>https://api.twitter.com/1.1/favorites/destroy.json</string>
+	<key>RetweetUrl</key>
+	<string>https://api.twitter.com/1.1/statuses/retweet/</string>
+	<key>CallBackUrl</key>
+	<string>twitterguestbackurl://oauth-callback/twitter</string>
+</dict>
+</plist>

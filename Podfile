@@ -6,6 +6,10 @@ target 'TwitterGuest' do
   use_frameworks!
    pod 'Swifter'
    pod 'Iconic', :git => 'https://github.com/dzenbot/Iconic.git', :tag => '1.3'
+   pod 'OAuthSwift', '~> 1.1.0'
+   pod 'Alamofire', '~> 4.4'
+   pod 'ReachabilitySwift', '~> 3'
+   pod 'IQKeyboardManagerSwift'
 
 
   # Pods for TwitterGuest

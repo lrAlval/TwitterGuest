@@ -9,10 +9,10 @@
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
-        <!--InitVC-->
+        <!--LoginVC-->
         <scene sceneID="WY5-nc-AKs">
             <objects>
-                <viewController id="Ofm-oz-8qo" customClass="InitVC" customModule="TwitterGuest" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="Ofm-oz-8qo" customClass="LoginVC" customModule="TwitterGuest" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="zon-VL-5bz"/>
                         <viewControllerLayoutGuide type="bottom" id="sic-QR-UeL"/>
@@ -63,6 +63,23 @@
                                     <segue destination="z15-1V-KSk" kind="presentation" id="Rhx-MM-eJx"/>
                                 </connections>
                             </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="zTk-RA-8iE">
+                                <rect key="frame" x="95" y="486" width="184" height="30"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="17"/>
+                                <state key="normal" title="Test auth">
+                                    <color key="titleColor" red="0.0078431372550000003" green="0.73333333329999995" blue="0.94509803920000002" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                </state>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
+                                        <integer key="value" value="5"/>
+                                    </userDefinedRuntimeAttribute>
+                                </userDefinedRuntimeAttributes>
+                                <connections>
+                                    <action selector="onLogin" destination="Ofm-oz-8qo" eventType="touchUpInside" id="7vE-1y-KWe"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" red="0.0" green="0.67450980392156867" blue="0.92941176470588238" alpha="1" colorSpace="calibratedRGB"/>
                     </view>
@@ -96,7 +113,7 @@
             <objects>
                 <navigationController id="77B-Fy-hPA" sceneMemberID="viewController">
                     <tabBarItem key="tabBarItem" title="Item" id="zXk-li-L6d"/>
-                    <navigationBar key="navigationBar" contentMode="scaleToFill" misplaced="YES" id="0XU-gA-hls">
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="0XU-gA-hls">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
                     </navigationBar>
@@ -113,7 +130,7 @@
             <objects>
                 <navigationController id="MTb-4F-4N6" sceneMemberID="viewController">
                     <tabBarItem key="tabBarItem" title="Item" id="flp-Vv-rzB"/>
-                    <navigationBar key="navigationBar" contentMode="scaleToFill" misplaced="YES" id="NEj-eE-c8N">
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="NEj-eE-c8N">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
                     </navigationBar>
@@ -130,7 +147,7 @@
             <objects>
                 <navigationController id="0dw-3s-v2r" sceneMemberID="viewController">
                     <tabBarItem key="tabBarItem" title="Item" id="2xX-eH-CDu"/>
-                    <navigationBar key="navigationBar" contentMode="scaleToFill" misplaced="YES" id="93I-K4-Ugj">
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="93I-K4-Ugj">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
                     </navigationBar>
@@ -147,7 +164,7 @@
             <objects>
                 <navigationController id="aaP-e7-RvD" sceneMemberID="viewController">
                     <tabBarItem key="tabBarItem" title="Item" id="nyh-XH-scK"/>
-                    <navigationBar key="navigationBar" contentMode="scaleToFill" misplaced="YES" id="TJB-n4-1pA">
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="TJB-n4-1pA">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
                     </navigationBar>
@@ -425,7 +442,7 @@
             <objects>
                 <navigationController automaticallyAdjustsScrollViewInsets="NO" id="xQm-DD-S9j" sceneMemberID="viewController">
                     <toolbarItems/>
-                    <navigationBar key="navigationBar" contentMode="scaleToFill" misplaced="YES" id="tuG-Qv-ltO">
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="tuG-Qv-ltO">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
                     </navigationBar>
