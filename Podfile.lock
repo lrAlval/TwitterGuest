@@ -3,16 +3,18 @@ PODS:
   - Iconic (1.2)
   - IQKeyboardManagerSwift (4.0.10)
   - OAuthSwift (1.1.2)
+  - OAuthSwiftAlamofire (0.1.0):
+    - Alamofire
+    - OAuthSwift
   - ReachabilitySwift (3)
-  - Swifter (1.3.3)
 
 DEPENDENCIES:
   - Alamofire (~> 4.4)
   - Iconic (from `https://github.com/dzenbot/Iconic.git`, tag `1.3`)
   - IQKeyboardManagerSwift
   - OAuthSwift (~> 1.1.0)
+  - OAuthSwiftAlamofire
   - ReachabilitySwift (~> 3)
-  - Swifter
 
 EXTERNAL SOURCES:
   Iconic:
@@ -29,9 +31,9 @@ SPEC CHECKSUMS:
   Iconic: 03d941cfad0c499ba0cde153cfbea6de6487f936
   IQKeyboardManagerSwift: 75ba21a23794a1e6b6fe6d9a267ea17f80e06771
   OAuthSwift: 5aa5659984d3ca3206ba636a9e7a9c6626b2e8bd
+  OAuthSwiftAlamofire: 20bb998ac506f82c3bab0625fbc98a9c6fca783f
   ReachabilitySwift: f5b9bb30a0777fac8f09ce8b067e32faeb29bb64
-  Swifter: 3fef6ec31449a8e3a29cf8551a9fe23485f15bc0
 
-PODFILE CHECKSUM: 87f4f8a9756386eaab35d13161f26ca59dde1f6f
+PODFILE CHECKSUM: a9dc9d9ebc566e2f986f57a1af4207c3bee66a1e
 
 COCOAPODS: 1.2.1
